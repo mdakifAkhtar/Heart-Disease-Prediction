@@ -1,0 +1,259 @@
+/* ================= BODY ================= */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ================= GLASS CARD ================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    color: white;
+}
+
+/* ================= TITLE ================= */
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* ================= GRID CENTERED ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+/* ================= FORM GROUP ================= */
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* ================= INPUT DESIGN ================= */
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px rgba(0,255,255,0.6);
+}
+
+/* Dropdown arrow fix */
+select option {
+    color: black;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+    margin-top: 40px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* ================= RESULT ================= */
+
+.result {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    background: rgba(255,255,255,0.1);
+}
+
+.result.low {
+    border: 2px solid #2ecc71;
+}
+
+.result.high {
+    border: 2px solid #e74c3c;
+}
+
+/* Fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RISK CIRCLE ================= */
+
+.risk-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background: conic-gradient(
+        #2ecc71 0%,
+        #f1c40f 50%,
+        #e74c3c 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ================= DISCLAIMER ================= */
+
+.disclaimer {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: center;
+}
+/* Base Result */
+.result {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.6s ease-in-out;
+    border: 3px solid transparent;
+}
+
+/* ================= GREEN (0–29%) ================= */
+
+.low-risk {
+    border-color: #2ecc71;
+    box-shadow: 0 0 20px #2ecc71;
+    animation: greenPulse 2s infinite;
+}
+
+@keyframes greenPulse {
+    0% { box-shadow: 0 0 10px #2ecc71; }
+    50% { box-shadow: 0 0 25px #2ecc71; }
+    100% { box-shadow: 0 0 10px #2ecc71; }
+}
+
+/* ================= LIGHT ORANGE (30–45%) ================= */
+
+.medium-light {
+    border-color: #f1c40f;
+    box-shadow: 0 0 20px #f1c40f;
+    animation: orangePulseLight 2s infinite;
+}
+
+@keyframes orangePulseLight {
+    0% { box-shadow: 0 0 10px #f1c40f; }
+    50% { box-shadow: 0 0 25px #f1c40f; }
+    100% { box-shadow: 0 0 10px #f1c40f; }
+}
+
+/* ================= DARK ORANGE (46–74%) ================= */
+
+.medium-dark {
+    border-color: #e67e22;
+    box-shadow: 0 0 25px #e67e22;
+    animation: orangePulseDark 2s infinite;
+}
+
+@keyframes orangePulseDark {
+    0% { box-shadow: 0 0 15px #e67e22; }
+    50% { box-shadow: 0 0 35px #e67e22; }
+    100% { box-shadow: 0 0 15px #e67e22; }
+}
+
+/* ================= RED (75%+) ================= */
+
+.high-risk {
+    border-color: #e74c3c;
+    box-shadow: 0 0 30px #e74c3c;
+    animation: redPulse 1.5s infinite;
+}
+
+@keyframes redPulse {
+    0% { box-shadow: 0 0 15px #e74c3c; }
+    50% { box-shadow: 0 0 45px #e74c3c; }
+    100% { box-shadow: 0 0 15px #e74c3c; }
+}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
