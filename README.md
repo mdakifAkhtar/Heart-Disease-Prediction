@@ -1,4 +1,4 @@
-# ❤️ Heart Disease Prediction System
+# 🫀 Heart Disease Prediction System
 
 A Machine Learning web application that predicts the risk of heart disease based on user medical inputs.
 
