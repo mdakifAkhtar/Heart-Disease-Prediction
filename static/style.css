@@ -43,43 +43,42 @@ h1 {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;   /* increase gap */
-}
-.form-group {
+    gap: 30px;              /* Equal spacing */
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;   /* space between label and input */
 }
+
+
 
 /* ================= FORM GROUP ================= */
 
 .form-group {
     width: 100%;
     display: flex;
+    min-height: 90px;
     flex-direction: column;
-    align-items: center;
+    gap: 8px;   /* space between label and input */
 }
 
 label {
     font-size: 13px;
-    margin-bottom: 6px;
-    opacity: 0.9;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 /* ================= INPUT DESIGN ================= */
 
-input, select {
+input,
+select {
     width: 100%;
-    padding: 12px;
+    height: 48px;          /* SAME HEIGHT FOR ALL */
+    padding: 0 12px;       /* Equal internal spacing */
     border-radius: 12px;
     border: none;
     background: rgba(255,255,255,0.12);
     color: white;
-    text-align: center;
     font-size: 14px;
-    transition: 0.3s;
+    text-align: center;
+    box-sizing: border-box;   /* IMPORTANT */
 }
 
 input:focus, select:focus {
@@ -215,6 +214,8 @@ button:hover {
     box-shadow: 0 0 20px #f1c40f;
     animation: orangePulseLight 2s infinite;
 }
+
+
 
 @keyframes orangePulseLight {
     0% { box-shadow: 0 0 10px #f1c40f; }
