@@ -31,9 +31,7 @@ def predict():
         oldpeak = float(request.form['oldpeak'])
 
         # Feature order must match training
-        features = np.array([[sex, age, cp_ata, exercise,
-                              st_up, fasting, maxhr,
-                              st_flat, oldpeak]])
+        features = np.array([[sex, age, cp_ata, exercise,st_up, fasting, maxhr,st_flat, oldpeak]])
 
         # Scale numerical columns (Age, MaxHR, Oldpeak)
         numerical_values = features[:, [1, 6, 8]]
