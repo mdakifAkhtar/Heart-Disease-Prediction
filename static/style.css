@@ -43,8 +43,13 @@ h1 {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    justify-items: center;
+    gap: 30px;   /* increase gap */
+}
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;   /* space between label and input */
 }
 
 /* ================= FORM GROUP ================= */
